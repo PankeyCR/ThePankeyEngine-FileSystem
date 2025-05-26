@@ -43,7 +43,7 @@
 						}
 						a_values.reset();
 						void* i_pointer = (void*)a_values.getArrayPointer();
-						Base::memory_size i_size = MemorySize(T);
+						Base::memory_size i_size = sizeof(T);
 						int i_read = this->read(i_pointer, a_count, i_size);
 						a_values.setLength(i_read / i_size);
 					}
@@ -54,7 +54,7 @@
 							return;
 						}
 						void* i_pointer = (void*)a_values.getArrayPointer();
-						Base::memory_size i_size = MemorySize(T);
+						Base::memory_size i_size = sizeof(T);
 						this->write(i_pointer, a_count, i_size);
 					}
 			};
